@@ -133,20 +133,28 @@
 }
 
 .aoTable {
-  display: table;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  text-align: center;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
-.aoTableCell {
-  color: hsl(0, 80%, 38%);
-  display: table-cell;
-  vertical-align: middle;
-  -webkit-transition: color 3s ease;
-  transition: color 3s ease;
+h1 {
+  margin: 0;
 }
 
-img {
-  width: 50%;
+.god-image img {
+  margin: auto;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .welcome-text {
+    font-size: 2.5rem;
+  }
 }
