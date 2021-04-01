@@ -91,7 +91,7 @@ button.drawer-toggle {
 .pages {
 }
 .pages [class^="page-num-"] {
-  background-image: url("https://img00.deviantart.net/cbb9/i/2005/258/c/4/paper_texture_v5_by_bashcorpo.jpg");
+  background-image: url("./PAGE.png");
   background-size: 200% 100%;
   position: relative;
 }
