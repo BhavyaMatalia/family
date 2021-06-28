@@ -13,7 +13,7 @@ body {
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
-    url(https://s-media-cache-ak0.pinimg.com/originals/30/b3/a9/30b3a9b27032a6b9c1d7a69d2400fb9e.jpg);
+    /*url(https://s-media-cache-ak0.pinimg.com/originals/30/b3/a9/30b3a9b27032a6b9c1d7a69d2400fb9e.jpg);*/
   font-family: "Stalemate", cursive;
 }
 
@@ -72,8 +72,8 @@ button.drawer-toggle {
   /*   width: 670px; */
 }
 
-.book-wrapper img {
-  filter: drop-shadow(15px 5px 5px #494338);
+.book-wrapper .book-cover img{
+  /*filter*/: drop-shadow(15px 5px 5px #494338);
   display: block;
   height: 90vh;
   width: 75vw;
@@ -91,7 +91,9 @@ button.drawer-toggle {
 .pages {
 }
 .pages [class^="page-num-"] {
-  background-image: url("./PAGE.png");
+  /*background-image: url("./PAGE.png");*/
+  border: 3px solid white;
+  background-color: #FFE4C4;
   background-size: 200% 100%;
   position: relative;
 }

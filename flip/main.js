@@ -3092,6 +3092,7 @@
 })(jQuery);
 
 $(document).ready(function () {
+
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
@@ -3119,6 +3120,15 @@ $(document).ready(function () {
       }
     }
   });
+
+setTimeout(function(){
+    // Do the first thing
+    $(".pages").turn("page",3);
+    setTimeout(function() {
+        // Do a second thing
+        $(".pages").turn("page",5);
+    }, 2000);
+}, 2000);
 
   //getting drawer and toggle button
   const drawerMenu = $(".drawer-menu");
