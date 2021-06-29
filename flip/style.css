@@ -18,7 +18,7 @@ body {
 }
 
 ul.drawer-menu {
-  z-index: 35;
+  z-index: 38;
   position: fixed;
   background: white;
   color: black;
@@ -48,6 +48,7 @@ li.page-number {
 .englishFonts {
   font-family: Verdana, sans-serif;
 }
+
 
 button.drawer-toggle {
   z-index: 35;
@@ -80,7 +81,7 @@ button.drawer-toggle {
 }
 .pages-container {
   position: absolute;
-  top: 4%;
+  top: 8%;
   left: 3%;
   right: 0;
   bottom: 0;
@@ -135,8 +136,35 @@ button.drawer-toggle {
   left: 0;
   top: 0;
 }
+
+.content-inner{
+    font-size: 1rem !important;
+  }
+
+@media screen and (max-width: 768px) {
+  .content-inner{
+    font-size: 0.8rem !important;
+  }
+
+  ul.drawer-menu {
+  z-index: 38;
+  position: fixed;
+  background: white;
+  color: black;
+  height: 100vh;
+  top: 0;
+  left: -100vw;
+  max-width: 70vw;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  border-right: 1px solid black;
+}
+}
+
 @media only screen and (max-width: 768px) {
   .book-wrapper img {
     width: 90vw;
   }
 }
+
