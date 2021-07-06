@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Stalemate");
+/*@import url("https://fonts.googleapis.com/css?family=Stalemate");*/
 *,
 *:before,
 *:after {
@@ -14,7 +14,7 @@ body {
       rgba(255, 255, 255, 0.9)
     ),
     /*url(https://s-media-cache-ak0.pinimg.com/originals/30/b3/a9/30b3a9b27032a6b9c1d7a69d2400fb9e.jpg);*/
-  font-family: "Stalemate", cursive;
+  /*font-family: "Stalemate", cursive;*/
 }
 
 ul.drawer-menu {
@@ -81,8 +81,8 @@ button.drawer-toggle {
 }
 .pages-container {
   position: absolute;
-  top: 8%;
-  left: 3%;
+  top: 4%;
+  left: 4%;
   right: 0;
   bottom: 0;
   width: 91.5%;
@@ -92,7 +92,7 @@ button.drawer-toggle {
 .pages {
 }
 .pages [class^="page-num-"] {
-  /*background-image: url("./PAGE.png");*/
+  background-image: url("./2785815.jpg");
   border: 3px solid white;
   background-color: #FFE4C4;
   background-size: 200% 100%;
@@ -113,9 +113,12 @@ button.drawer-toggle {
 }
 
 .content-inner {
+  font-family: 'Hind Vadodara', sans-serif !important;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  font-weight: 900;
+  color: #c56517;
 }
 
 .book-wrapper {
@@ -168,3 +171,88 @@ button.drawer-toggle {
   }
 }
 
+.topcorner{
+    position:absolute;
+    top:10px;
+    right: 10px;
+    font-weight: 900;
+ }
+
+ .topcorner-left{
+    position:absolute;
+    top:10px;
+    left: 10px;
+    font-weight: 900;
+ }
+
+ .bottomcorner{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+ }
+
+ .bottomleft{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+ }
+
+ .bottomcnter{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border: solid 1px;
+  padding: 5px;
+ }
+
+.imgpage{
+  height: 28rem; 
+  width: 20rem;"
+}
+
+ @media only screen and (max-width: 768px) {
+  .topcorner{
+    position:absolute;
+    top:10px;
+    right: 10px;
+    font-weight: 900;
+ }
+
+ .topcorner-left{
+    position:absolute;
+    top:10px;
+    left: 10px;
+    font-weight: 900;
+ }
+
+ .bottomcorner{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+ }
+
+ .bottomleft{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    left: auto;
+ }
+
+ .bottomcnter{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border: solid 1px;
+  padding: 5px;
+ }
+
+.imgpage{
+  height: 35rem; 
+  width: 20rem;"
+}
+
+}
