@@ -23,14 +23,14 @@
           move: "touchmove",
           up: "touchend",
           over: "touchstart",
-          out: "touchend"
+          out: "touchend",
         }
       : {
           down: "mousedown",
           move: "mousemove",
           up: "mouseup",
           over: "mouseover",
-          out: "mouseout"
+          out: "mouseout",
         },
     // Contansts used for each corner
     //   | tl * tr |
@@ -40,7 +40,7 @@
     corners = {
       backward: ["bl", "tl"],
       forward: ["br", "tr"],
-      all: ["tl", "bl", "tr", "br", "l", "r"]
+      all: ["tl", "bl", "tr", "br", "l", "r"],
     },
     // Display values
 
@@ -77,12 +77,12 @@
 
       // Events
 
-      when: null
+      when: null,
     },
     flipOptions = {
       // Size of the active zone of each corner
 
-      cornerSize: 100
+      cornerSize: 100,
     },
     // Number of pages in the DOM, minimum value: 6
 
@@ -112,7 +112,7 @@
           {
             width: this.width(),
             height: this.height(),
-            direction: this.attr("dir") || this.css("direction") || "ltr"
+            direction: this.attr("dir") || this.css("direction") || "ltr",
           },
           turnOptions,
           options
@@ -131,7 +131,7 @@
           touchStart: $.proxy(turnMethods._touchStart, this),
           touchMove: $.proxy(turnMethods._touchMove, this),
           touchEnd: $.proxy(turnMethods._touchEnd, this),
-          start: $.proxy(turnMethods._eventStart, this)
+          start: $.proxy(turnMethods._eventStart, this),
         };
 
         // Add event listeners
@@ -145,7 +145,7 @@
         this.css({
           position: "relative",
           width: options.width,
-          height: options.height
+          height: options.height,
         });
 
         // Set the initial display
@@ -266,7 +266,7 @@
               data.pageWrap[page] = $("<div/>", {
                 class: "page-wrapper",
                 page: page,
-                css: { position: "absolute", overflow: "hidden" }
+                css: { position: "absolute", overflow: "hidden" },
               });
 
               // Append to this flipbook
@@ -346,7 +346,7 @@
             "turning",
             "turned",
             "zooming",
-            "missing"
+            "missing",
           ];
 
         if (trigger("destroying", this) == "prevented") return;
@@ -419,7 +419,7 @@
                 currentView[i],
                 currentView,
                 data.pageZoom[currentView[i]],
-                data.zoom
+                data.zoom,
               ]);
 
               data.pageZoom[currentView[i]] = data.zoom;
@@ -488,7 +488,7 @@
             .flip({
               page: page,
               next: odd || single ? page + 1 : page - 1,
-              turn: this
+              turn: this,
             })
             .flip("disable", data.disabled);
 
@@ -557,7 +557,7 @@
 
         return [
           Math.max(1, view[0] - left),
-          Math.min(data.totalPages, view[1] + right)
+          Math.min(data.totalPages, view[1] + right),
         ];
       },
 
@@ -692,7 +692,7 @@
               if (data.pages[page])
                 data.pages[next] = data.pages[page].flip("options", {
                   page: next,
-                  next: single || odd ? next + 1 : next - 1
+                  next: single || odd ? next + 1 : next - 1,
                 });
 
               if (change) {
@@ -947,7 +947,7 @@
         if (data.display == "double")
           return [
             view[0] > 0 ? view[0] : 0,
-            view[1] <= data.totalPages ? view[1] : 0
+            view[1] <= data.totalPages ? view[1] : 0,
           ];
         else return [view[0] > 0 && view[0] <= data.totalPages ? view[0] : 0];
       },
@@ -1044,7 +1044,7 @@
               newView[i],
               newView,
               data.pageZoom[newView[i]],
-              data.zoom
+              data.zoom,
             ]);
 
             data.pageZoom[newView[i]] = data.zoom;
@@ -1246,7 +1246,7 @@
             opts.page,
             opts.turn.turn("view", opts.page),
             actualZoom,
-            data.zoom
+            data.zoom,
           ]);
 
           data.pageZoom[opts.page] = data.zoom;
@@ -1441,7 +1441,7 @@
               zIndex:
                 (data.pageObjs[page].hasClass("hard")
                   ? pos.partZ[page]
-                  : pos.pageZ[page]) || (fixed ? -1 : 0)
+                  : pos.pageZ[page]) || (fixed ? -1 : 0),
             });
 
             if ((p = data.pages[page])) {
@@ -1502,7 +1502,7 @@
         if (!data.shadow) {
           data.shadow = $("<div />", {
             class: "shadow",
-            css: divAtt(0, 0, 0).css
+            css: divAtt(0, 0, 0).css,
           }).appendTo(this);
         }
 
@@ -1529,7 +1529,7 @@
               width: pageWidth,
               height: height,
               top: 0,
-              left: pageWidth
+              left: pageWidth,
             });
             break;
           case 2:
@@ -1537,7 +1537,7 @@
               width: pageWidth,
               height: height,
               top: 0,
-              left: 0
+              left: 0,
             });
             break;
           case 3:
@@ -1545,7 +1545,7 @@
               width: width,
               height: height,
               top: 0,
-              left: 0
+              left: 0,
             });
             break;
         }
@@ -1572,19 +1572,19 @@
             case 1:
               data.pageWrap[page].css({
                 zIndex: data.totalPages,
-                display: ""
+                display: "",
               });
               break;
             case 2:
               data.pageWrap[page].css({
                 zIndex: data.totalPages - 1,
-                display: ""
+                display: "",
               });
               break;
             case 0:
               data.pageWrap[page].css({
                 zIndex: 0,
-                display: data.pageObjs[page].hasClass("fixed") ? "" : "none"
+                display: data.pageObjs[page].hasClass("fixed") ? "" : "none",
               });
               break;
           }
@@ -1641,7 +1641,7 @@
 
       version: function () {
         return version;
-      }
+      },
     },
     // Methods and properties for the flip page effect
 
@@ -1653,8 +1653,8 @@
           f: {
             disabled: false,
             hover: false,
-            effect: this.hasClass("hard") ? "hard" : "sheet"
-          }
+            effect: this.hasClass("hard") ? "hard" : "sheet",
+          },
         });
 
         this.flip("options", opts);
@@ -1677,7 +1677,7 @@
 
         if (opts) {
           flipMethods.setData.call(this, {
-            opts: $.extend({}, data.opts || flipOptions, opts)
+            opts: $.extend({}, data.opts || flipOptions, opts),
           });
           return this;
         } else return data.opts;
@@ -1690,7 +1690,7 @@
 
         if (data.fwrapper)
           data.fwrapper.css({
-            zIndex: z || parseInt(data.parent.css("z-index"), 10) || 0
+            zIndex: z || parseInt(data.parent.css("z-index"), 10) || 0,
           });
 
         return this;
@@ -1774,7 +1774,7 @@
 
         return flipMethods._cornerActivated.call(this, {
           x: e.pageX - pos.left,
-          y: e.pageY - pos.top
+          y: e.pageY - pos.top,
         });
       },
 
@@ -1952,7 +1952,7 @@
 
               if (!data.fparent) {
                 var fparent = $("<div/>", {
-                  css: { "pointer-events": "none" }
+                  css: { "pointer-events": "none" },
                 }).hide();
                 fparent.data().flips = 0;
                 fparent
@@ -1968,7 +1968,7 @@
                 top: 0,
                 left: 0,
                 bottom: "auto",
-                right: "auto"
+                right: "auto",
               });
 
               data.wrapper = $("<div/>", divAtt(0, 0, this.css("z-index")))
@@ -2097,7 +2097,7 @@
                   .css({
                     display: "",
                     left: leftPos,
-                    backgroundColor: "rgba(0,0,0," + 0.5 * relX + ")"
+                    backgroundColor: "rgba(0,0,0," + 0.5 * relX + ")",
                   })
                   .transform("rotateY(0deg)");
               else data.ashadow.hide();
@@ -2122,7 +2122,7 @@
                 point2D((-gradientX + 1) * 100, 0),
                 [
                   [0, "rgba(0,0,0,0.3)"],
-                  [1, "rgba(0,0,0,0)"]
+                  [1, "rgba(0,0,0,0)"],
                 ],
                 2
               );
@@ -2262,7 +2262,7 @@
                     left: f[c[0]],
                     top: f[c[1]],
                     right: f[c[2]],
-                    bottom: f[c[3]]
+                    bottom: f[c[3]],
                   },
                   cssB = {},
                   aliasingFk = a != 90 && a != -90 ? (left ? -1 : 1) : 0,
@@ -2317,9 +2317,9 @@
                       [gradientStartVal, "rgba(0,0,0,0)"],
                       [
                         (1 - gradientStartVal) * 0.8 + gradientStartVal,
-                        "rgba(0,0,0," + 0.2 * gradientOpacity + ")"
+                        "rgba(0,0,0," + 0.2 * gradientOpacity + ")",
                       ],
-                      [1, "rgba(255,255,255," + 0.2 * gradientOpacity + ")"]
+                      [1, "rgba(255,255,255," + 0.2 * gradientOpacity + ")"],
                     ],
                     3,
                     alpha
@@ -2333,7 +2333,7 @@
                       [
                         [0.6, "rgba(0,0,0,0)"],
                         [0.8, "rgba(0,0,0," + 0.3 * gradientOpacity + ")"],
-                        [1, "rgba(0,0,0,0)"]
+                        [1, "rgba(0,0,0,0)"],
                       ],
                       3
                     );
@@ -2457,7 +2457,7 @@
                 c.x = Math.round(v[0]);
                 c.y = Math.round(v[1]);
                 flipMethods._fold.call(that, c);
-              }
+              },
             });
           } else {
             flipMethods._fold.call(this, c);
@@ -2515,7 +2515,7 @@
               left: 0,
               top: 0,
               right: "auto",
-              bottom: "auto"
+              bottom: "auto",
             }).transform("");
 
             data.wrapper.transform("");
@@ -2568,7 +2568,7 @@
             },
             complete: hide,
             duration: 800,
-            hiding: true
+            hiding: true,
           });
         } else {
           this.animatef(false);
@@ -2584,7 +2584,7 @@
         corner = {
           corner: data.corner
             ? data.corner.corner
-            : corner || flipMethods._cAllowed.call(this)[0]
+            : corner || flipMethods._cAllowed.call(this)[0],
         };
 
         var p1 =
@@ -2609,7 +2609,7 @@
             that.trigger("end", [data.opts, true]);
           },
           duration: turnData.opts.duration,
-          turning: true
+          turning: true,
         });
 
         data.corner = null;
@@ -2733,7 +2733,7 @@
               {
                 corner: corner,
                 x: point.x,
-                y: point.y
+                y: point.y,
               },
               animate
             );
@@ -2745,7 +2745,7 @@
         }
 
         return this;
-      }
+      },
     };
 
   // Processes classes
@@ -2767,8 +2767,8 @@
         top: top,
         left: left,
         overflow: overf || "hidden",
-        zIndex: zIndex || "auto"
-      }
+        zIndex: zIndex || "auto",
+      },
     };
   }
 
@@ -2864,7 +2864,7 @@
         OTransition: "oTransitionEnd",
         MSTransition: "transitionend",
         MozTransition: "transitionend",
-        WebkitTransition: "webkitTransitionEnd"
+        WebkitTransition: "webkitTransitionEnd",
       };
 
     for (t in transitions) {
@@ -2896,7 +2896,7 @@
           p1.y +
           "%, " +
           cols.join(",") +
-          " )"
+          " )",
       });
     } else {
       p0 = { x: (p0.x / 100) * obj.width(), y: (p0.y / 100) * obj.height() };
@@ -2933,7 +2933,7 @@
 
       obj.css({
         "background-image":
-          vendor + "linear-gradient(" + -angle + "rad," + cols.join(",") + ")"
+          vendor + "linear-gradient(" + -angle + "rad," + cols.join(",") + ")",
       });
     }
   }
@@ -3068,7 +3068,7 @@
             },
             easing: function (x, t, b, c, data) {
               return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
-            }
+            },
           },
           point
         );
@@ -3079,7 +3079,7 @@
       } else {
         delete data["effect"];
       }
-    }
+    },
   });
 
   // Export some globals
@@ -3092,7 +3092,6 @@
 })(jQuery);
 
 $(document).ready(function () {
-
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
@@ -3117,18 +3116,9 @@ $(document).ready(function () {
     when: {
       turned: function (e, page) {
         console.log("Current view: ", $(this).turn("view"));
-      }
-    }
+      },
+    },
   });
-
-setTimeout(function(){
-    // Do the first thing
-    $(".pages").turn("page",3);
-    setTimeout(function() {
-        // Do a second thing
-        $(".pages").turn("page",5);
-    }, 2000);
-}, 2000);
 
   //getting drawer and toggle button
   const drawerMenu = $(".drawer-menu");
@@ -3168,4 +3158,13 @@ setTimeout(function(){
       closeDrawer();
     }
   });
+
+  // flip to the page number provied as id in url search params
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const id = urlSearchParams.get("id");
+  if (id) {
+    setTimeout(function () {
+      $(".pages").turn("page", id);
+    }, 1000);
+  }
 });
