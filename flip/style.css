@@ -12,7 +12,9 @@ body {
   background: linear-gradient(
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
-    ),
+    );
+  overflow: hidden;
+  padding: 10px;
     /*url(https://s-media-cache-ak0.pinimg.com/originals/30/b3/a9/30b3a9b27032a6b9c1d7a69d2400fb9e.jpg);*/
   /*font-family: "Stalemate", cursive;*/
 }
@@ -67,9 +69,15 @@ button.drawer-toggle {
   display: flex;
   justify-content: center;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+
 .book-wrapper {
   position: relative;
-  margin: 2% auto;
   /*   width: 670px; */
 }
 
@@ -254,5 +262,6 @@ button.drawer-toggle {
   height: 35rem; 
   width: 20rem;"
 }
+
 
 }

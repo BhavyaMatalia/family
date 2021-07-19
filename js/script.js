@@ -6,11 +6,11 @@ document.querySelector(".rnOuter").addEventListener("click", (e) => {
     curtain.style.transform = "scaleX(0)";
   });
   setTimeout(function () {
-    window.location.href = "./flip/index.html";
+    window.location.href = "navigation.html";
   }, 7000);
 });
 
 document.querySelector(".aoTable").addEventListener("click", (e) => {
-	window.location.href = "./flip/index.html"
+	window.location.href = "navigation.html"
   });
   

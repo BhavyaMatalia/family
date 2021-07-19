@@ -3120,44 +3120,6 @@ $(document).ready(function () {
     },
   });
 
-  //getting drawer and toggle button
-  const drawerMenu = $(".drawer-menu");
-  const drawerButton = $(".drawer-toggle");
-
-  // //adding pages in drawer
-  // let totalPages = $(".pages").turn("pages");
-  // for (let i = 1; i <= totalPages; i++) {
-  //   drawerMenu.append(`<li class="page-number">${i}</li>`);
-  // }
-
-  const drawerMenuWidth = window
-    .getComputedStyle(document.querySelector(".drawer-menu"))
-    .getPropertyValue("width");
-  drawerMenu.css("left", `-${drawerMenuWidth}`);
-
-  const closeDrawer = () => {
-    drawerMenu.css("left", `-${drawerMenuWidth}`);
-    drawerButton.css("left", "0");
-  };
-
-  const openDrawer = () => {
-    drawerMenu.css("left", "0rem");
-    drawerButton.css("left", drawerMenuWidth);
-  };
-
-  //opening the page clicked in drawer and closing drawer
-  $(".drawer-menu li").click(function (e) {
-    $(".pages").turn("page", +e.target.id);
-    closeDrawer();
-  });
-
-  drawerButton.click(() => {
-    if (drawerButton.css("left") === "0px") {
-      openDrawer();
-    } else {
-      closeDrawer();
-    }
-  });
 
   // flip to the page number provied as id in url search params
   const urlSearchParams = new URLSearchParams(window.location.search);
