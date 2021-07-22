@@ -3,6 +3,9 @@
 <head>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   <link href="./style.css" rel="stylesheet" />
   <style>
   body {
@@ -17,7 +20,7 @@
   justify-content: center;
   margin: 20px 0;
   padding: 10px;
-  height: 30rem;
+  height: 27rem;
   color: #c56517;
   font-size: 2rem;
   background: url(./flip/closebook.jpg);
@@ -36,10 +39,29 @@
   transform: translate(-50%, -50%);
 }
 
-.box a {
-  text-decoration: none;
+a {
+text-decoration: none; 
+}
+
+a p{
   color: #d4d3b5;
   font-weight: bolder;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 </style>
@@ -49,42 +71,57 @@
   <div class="row">
     
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=1">
       <div class="box">
-        <a href="flip/index.html?id=1"><p>માટલીયા પરિવાર </br> દેવસ્થાન વિશે </br> એક ઝલક</p></a>
+        <p>માટલીયા પરિવાર </br> દેવસ્થાન વિશે </br> એક ઝલક</p>
       </div>
+      </a>
     </div>
     
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=5">
       <div class="box">
-        <a href="flip/index.html?id=5"><p>માટલીયા પરિવાર </br> નું સેવીંગ એકાઉન્ટ</p></a>
+        <p>માટલીયા પરિવાર </br> નું સેવીંગ એકાઉન્ટ</p>
       </div>
+      </a>
     </div>
-    
+
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=6">
       <div class="box">
-        <a href="flip/index.html?id=6"><p>ઇતિહાસ</p></a>
+        <p>ઇતિહાસ</p>
       </div>
+    </a>
     </div>  
  
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=23">
       <div class="box">
-        <a href="flip/index.html?id=23"><p>નિવેદ</p></a>
+        <p>નિવેદ</p>
       </div>
+      </a>
     </div>
     
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=28">
       <div class="box">
-        <a href="flip/index.html?id=28"><p>સામાન્ય નિયમો </br> ની સમજ</p></a>
+        <p>સામાન્ય નિયમો </br> ની સમજ</p>
       </div>
+      </a>
     </div>
     
     <div class="col-lg-4 col-sm-6">
+      <a href="flip/index.html?id=30">
       <div class="box">
-        <a href="flip/index.html?id=30"><p>સુતક</p></a>
+        <p>સુતક</p>
       </div>
+      </a>
     </div>  
   </div>
 </div>
+  <div class="row footer">
+    <p>Designed By: <b>Bhavya Matalia</b> ~ <a href="https://alchemydesign.in/">Alchmy Design</a></p>
+  </div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
